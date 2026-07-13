@@ -82,6 +82,10 @@ const McpMarketPage = dynamic(
   },
 );
 
+const Workbench = dynamic(async () => (await import("./workbench")).Workbench, {
+  loading: () => <Loading noLogo />,
+});
+
 export function useSwitchTheme() {
   const config = useAppConfig();
 
@@ -149,9 +153,15 @@ const loadAsyncGoogleFont = () => {
   document.head.appendChild(linkEl);
 };
 
-export function WindowContent(props: { children: React.ReactNode }) {
+export function WindowContent(props: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className={styles["window-content"]} id={SlotID.AppBody}>
+    <div
+      className={clsx(styles["window-content"], props.className)}
+      id={SlotID.AppBody}
+    >
       {props?.children}
     </div>
   );
@@ -165,6 +175,7 @@ function Screen() {
   const isAuth = location.pathname === Path.Auth;
   const isSd = location.pathname === Path.Sd;
   const isSdNew = location.pathname === Path.SdNew;
+  const isWorkbenchMode = isHome; // 首页使用工作台模式
 
   const isMobileScreen = useMobileScreen();
   const shouldTightBorder =
@@ -187,14 +198,18 @@ function Screen() {
     if (isSdNew) return <Sd />;
     return (
       <>
-        <SideBar
-          className={clsx({
-            [styles["sidebar-show"]]: isHome,
-          })}
-        />
-        <WindowContent>
+        {!isWorkbenchMode && (
+          <SideBar
+            className={clsx({
+              [styles["sidebar-show"]]: !isWorkbenchMode,
+            })}
+          />
+        )}
+        <WindowContent
+          className={clsx({ [styles["workbench-mode"]]: isWorkbenchMode })}
+        >
           <Routes>
-            <Route path={Path.Home} element={<Chat />} />
+            <Route path={Path.Home} element={<Workbench />} />
             <Route path={Path.NewChat} element={<NewChat />} />
             <Route path={Path.Masks} element={<MaskPage />} />
             <Route path={Path.Plugins} element={<PluginPage />} />
