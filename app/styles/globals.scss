@@ -4,40 +4,43 @@
 @mixin light {
   --theme: light;
 
-  /* color */
+  /* color — modern violet/indigo tech aesthetic */
   --white: white;
-  --black: rgb(48, 48, 48);
-  --gray: rgb(250, 250, 250);
-  --primary: rgb(29, 147, 171);
-  --second: rgb(231, 248, 255);
-  --hover-color: #f3f3f3;
-  --bar-color: rgba(0, 0, 0, 0.1);
+  --black: rgb(40, 40, 55);
+  --gray: rgb(250, 250, 252);
+  --primary: #7c3aed;
+  --second: #f5f3ff;
+  --hover-color: #ede9fe;
+  --bar-color: rgba(124, 58, 237, 0.15);
   --theme-color: var(--gray);
 
-  /* shadow */
-  --shadow: 50px 50px 100px 10px rgb(0, 0, 0, 0.1);
-  --card-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.05);
+  /* shadow — soft, refined */
+  --shadow: 0 4px 24px 0 rgba(124, 58, 237, 0.08);
+  --card-shadow: 0 1px 3px 0 rgba(124, 58, 237, 0.04), 0 1px 2px 0 rgba(124, 58, 237, 0.03);
 
   /* stroke */
-  --border-in-light: 1px solid rgb(222, 222, 222);
+  --border-in-light: 1px solid rgb(235, 233, 245);
 }
 
 @mixin dark {
   --theme: dark;
 
-  /* color */
-  --white: rgb(30, 30, 30);
-  --black: rgb(187, 187, 187);
-  --gray: rgb(21, 21, 21);
-  --primary: rgb(29, 147, 171);
-  --second: rgb(27 38 42);
-  --hover-color: #323232;
-
-  --bar-color: rgba(255, 255, 255, 0.1);
-
-  --border-in-light: 1px solid rgba(255, 255, 255, 0.192);
-
+  /* color — deep purple-tinted dark theme */
+  --white: #1e1b2e;
+  --black: rgb(235, 233, 245);
+  --gray: #252133;
+  --primary: #8b5cf6;
+  --second: #2a2440;
+  --hover-color: #2e2845;
+  --bar-color: rgba(139, 92, 246, 0.2);
   --theme-color: var(--gray);
+
+  /* shadow */
+  --shadow: 0 4px 24px 0 rgba(139, 92, 246, 0.12);
+  --card-shadow: 0 1px 3px 0 rgba(139, 92, 246, 0.08), 0 1px 2px 0 rgba(139, 92, 246, 0.05);
+
+  /* stroke */
+  --border-in-light: 1px solid rgba(139, 92, 246, 0.15);
 
   div:not(.no-dark) > svg {
     filter: invert(0.5);
@@ -137,7 +140,7 @@ body {
 select {
   border: var(--border-in-light);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 16px;
   appearance: none;
   cursor: pointer;
   background-color: var(--white);
@@ -188,7 +191,7 @@ input[type="range"] {
   height: 8px;
   width: 20px;
   background-color: var(--primary);
-  border-radius: 10px;
+  border-radius: 16px;
   cursor: pointer;
   transition: all ease 0.3s;
   margin-left: 5px;
@@ -228,7 +231,7 @@ input[type="number"],
 input[type="text"],
 input[type="password"] {
   appearance: none;
-  border-radius: 10px;
+  border-radius: 16px;
   border: var(--border-in-light);
   min-height: 36px;
   box-sizing: border-box;
@@ -288,7 +291,7 @@ pre {
     background-color: var(--black);
     color: var(--white);
     border: var(--border-in-light);
-    border-radius: 10px;
+    border-radius: 16px;
     transform: translateX(10px);
     pointer-events: none;
     opacity: 0;
@@ -306,7 +309,7 @@ pre {
 
 pre {
   .show-hide-button {
-    border-radius: 10px;
+    border-radius: 16px;
     position: absolute;
     inset: 0 0 auto 0;
     width: 100%;

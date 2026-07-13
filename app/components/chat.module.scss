@@ -12,7 +12,7 @@
   width: 64px;
   height: 64px;
   border: rgba($color: #888, $alpha: 0.2) 1px solid;
-  border-radius: 5px;
+  border-radius: 16px;
   margin-right: 10px;
   background-size: cover;
   background-position: center;
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 16px;
     float: right;
     background-color: var(--white);
   }
@@ -56,7 +56,7 @@
 
   .chat-input-action {
     display: inline-flex;
-    border-radius: 20px;
+    border-radius: 16px;
     font-size: 12px;
     background-color: var(--white);
     color: var(--black);
@@ -207,7 +207,7 @@
     background-color: var(--white);
     color: var(--black);
     border: var(--border-in-light);
-    border-radius: 10px;
+    border-radius: 16px;
     padding: 10px;
     font-size: 12px;
     user-select: text;
@@ -438,22 +438,27 @@
   box-sizing: border-box;
   max-width: 100%;
   margin-top: 10px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 10px;
-  font-size: 14px;
+  border-radius: 16px;
+  background-color: #f9fafb;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 1.625;
   user-select: text;
   word-break: break-word;
   border: var(--border-in-light);
   position: relative;
   transition: all ease 0.3s;
+  box-shadow: 0 1px 3px 0 rgba(124, 58, 237, 0.04);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
 .chat-message-audio {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 16px;
   background-color: rgba(0, 0, 0, 0.05);
   border: var(--border-in-light);
   position: relative;
@@ -492,7 +497,7 @@
 .chat-message-item-image,
 .chat-message-item-image-multi {
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 16px;
   border: rgba($color: #888, $alpha: 0.2) 1px solid;
 }
 
@@ -546,6 +551,7 @@
 
 .chat-message-user > .chat-message-container > .chat-message-item {
   background-color: var(--second);
+  font-size: 16px;
 
   &:hover {
     min-width: 0;
@@ -585,7 +591,7 @@
 
   background-color: var(--white);
   border: var(--border-in-light);
-  border-radius: 10px;
+  border-radius: 16px;
   margin-bottom: 10px;
   box-shadow: var(--shadow);
 
@@ -597,7 +603,7 @@
     transition: all ease 0.3s;
     border: transparent 1px solid;
     margin: 4px;
-    border-radius: 8px;
+    border-radius: 16px;
 
     &:not(:last-child) {
       margin-top: 0;
@@ -627,7 +633,7 @@
   cursor: text;
   display: flex;
   flex: 1;
-  border-radius: 10px;
+  border-radius: 16px;
   border: var(--border-in-light);
 }
 
@@ -642,7 +648,7 @@
 .chat-input {
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 16px;
   border: none;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.03);
   background-color: var(--white);
@@ -714,7 +720,7 @@
   align-items: center;
   justify-content: center;
   border: var(--border-in-light);
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 4px;
   background-color: var(--gray);
   min-width: 32px;

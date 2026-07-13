@@ -26,7 +26,7 @@
       width: 100%;
       background-color: var(--white);
       border: var(--border-in-light);
-      border-radius: 10px;
+      border-radius: 16px;
       animation: slide-in ease 0.3s;
     }
 
@@ -242,7 +242,7 @@
     width: 100%;
     padding: 16px;
     border: 1px solid var(--gray-200);
-    border-radius: 10px;
+    border-radius: 16px;
     background-color: var(--white);
 
     .array-input-item {
@@ -323,7 +323,7 @@
         max-width: 100%;
         padding: 10px;
         border: var(--border-in-light);
-        border-radius: 10px;
+        border-radius: 16px;
         box-sizing: border-box;
         font-size: 14px;
         background-color: var(--white);
@@ -343,7 +343,7 @@
       .browse-button {
         padding: 8px;
         border: var(--border-in-light);
-        border-radius: 10px;
+        border-radius: 16px;
         background-color: transparent;
         color: var(--black-50);
 
@@ -362,7 +362,7 @@
       .delete-button {
         padding: 8px;
         border: var(--border-in-light);
-        border-radius: 10px;
+        border-radius: 16px;
         background-color: transparent;
         color: var(--black-50);
 
@@ -391,7 +391,7 @@
       padding: 8px 12px;
       background-color: transparent;
       border: var(--border-in-light);
-      border-radius: 10px;
+      border-radius: 16px;
       color: var(--black);
       font-size: 12px;
       margin-top: 5px;
@@ -436,7 +436,7 @@
       width: 100%;
       padding: 16px;
       border: 1px solid var(--gray-200);
-      border-radius: 10px;
+      border-radius: 16px;
       background-color: var(--white);
 
       .array-input-item {
@@ -532,7 +532,7 @@
       width: 100%;
       padding: 10px;
       border: var(--border-in-light);
-      border-radius: 10px;
+      border-radius: 16px;
       box-sizing: border-box;
       font-size: 14px;
       background-color: var(--white);
@@ -608,7 +608,7 @@
     .list-item {
       border: none;
       background-color: transparent;
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 10px;
       margin-bottom: 10px;
       display: flex;
