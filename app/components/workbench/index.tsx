@@ -9,7 +9,6 @@ import { SettingsMenu } from "./settings-menu";
 import { useChatStore, useAppConfig } from "../../store";
 import { useNavigate } from "react-router-dom";
 import { showToast } from "../ui-lib";
-import Locale from "../../locales";
 
 type InteractionMode = "auto" | "manual" | "hybrid";
 
@@ -75,7 +74,7 @@ ${content}`,
   // 模拟处理请求（实际应该调用 API）
   const processContent = useCallback(async () => {
     if (!activeSkill || !state.inputText.trim()) {
-      showToast(Locale.Home.UnfinishedMessage);
+      showToast("请先选择技能并输入内容");
       return;
     }
 
